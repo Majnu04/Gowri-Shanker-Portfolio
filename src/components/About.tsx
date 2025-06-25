@@ -9,14 +9,14 @@ const About = () => {
       icon: GraduationCap,
       title: "B.Tech CSE Student",
       subtitle: "Vignan Institute of Information Technology",
-      detail: "CGPA: 8.96",
+      detail: "CGPA: 9.07",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Award,
       title: "Diploma in Computer Engineering",
       subtitle: "KIET, Kakinada",
-      detail: "81.2%",
+      detail: "85.2%",
       color: "from-purple-500 to-pink-500",
     },
     {
