@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -38,16 +37,15 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-950/95 backdrop-blur-md border-b border-blue-500/20 shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        bg-slate-950/80 backdrop-blur-md border-b border-blue-500/20 shadow-lg
+        ${scrolled ? "" : ""}
+      `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 md:py-4 relative">
+        <div className="flex justify-between items-center py-3 md:py-4">
           <motion.div
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent cursor-pointer flex-shrink-0"
+            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection("#home")}
           >
@@ -74,7 +72,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-white hover:bg-blue-500/20 hover:text-blue-400 transition-colors flex-shrink-0"
+            className="lg:hidden text-white hover:bg-blue-500/20 hover:text-blue-400 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             <motion.div
