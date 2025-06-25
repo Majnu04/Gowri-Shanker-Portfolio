@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system */
+/* Design System */
 @layer base {
-  html, body {
+  html,
+  body {
     height: 100%;
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
   }
 
   :root {
@@ -154,7 +156,8 @@
     padding: 1px;
     background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: subtract;
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -195,7 +198,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {

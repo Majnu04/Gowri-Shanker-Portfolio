@@ -27,5 +27,4 @@ const App = () => (
 export default App;
 
 <section className="profile-section mt-24">
-  {/* Profile image and content */}
 </section>
