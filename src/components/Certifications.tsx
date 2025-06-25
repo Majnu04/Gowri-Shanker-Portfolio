@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,7 +63,7 @@ const Certifications = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
@@ -73,23 +72,22 @@ const Certifications = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
+              className="w-full flex justify-center"
             >
-              <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 h-full group overflow-hidden relative">
+              <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 h-full group overflow-hidden relative w-full max-w-md mx-auto">
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
-                <CardContent className="p-8 relative">
-                  <div className="flex items-start space-x-4 mb-6">
+                <CardContent className="p-8 relative w-full">
+                  <div className="flex items-start space-x-4 mb-6 w-full">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${cert.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
                       <Award size={24} className="text-white" />
                     </div>
-                    
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300 break-words">
                         {cert.title}
                       </h3>
-                      <div className="flex items-center justify-between">
-                        <p className="text-blue-400 font-medium">{cert.issuer}</p>
+                      <div className="flex flex-wrap items-center justify-between gap-2 w-full">
+                        <p className="text-blue-400 font-medium break-words">{cert.issuer}</p>
                         <Badge variant="outline" className="border-green-500/50 text-green-400">
                           {cert.date}
                         </Badge>
@@ -97,20 +95,20 @@ const Certifications = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed break-words">
                     {cert.description}
                   </p>
 
-                  <div className="mb-6">
+                  <div className="mb-6 w-full">
                     <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                       Skills Gained
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 w-full">
                       {cert.skills.map((skill) => (
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className={`bg-gradient-to-r ${cert.color} text-white border-0 hover:shadow-lg transition-all duration-300`}
+                          className={`bg-gradient-to-r ${cert.color} text-white border-0 hover:shadow-lg transition-all duration-300 break-words`}
                         >
                           {skill}
                         </Badge>

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github, TrendingUp, Users, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,6 +17,7 @@ const Projects = () => {
         { icon: Zap, text: "Association Rule Mining", color: "text-purple-400" },
       ],
       gradient: "from-blue-500 to-purple-600",
+      github: "https://github.com/Majnu04/ecommerce-data-mining.git",
     },
     {
       title: "Food Exchange Web Platform",
@@ -30,6 +30,7 @@ const Projects = () => {
         { icon: TrendingUp, text: "Secure Authentication", color: "text-blue-400" },
       ],
       gradient: "from-green-500 to-emerald-600",
+      github: "https://github.com/Majnu04/food-management.git",
     },
     {
       title: "AI-Powered Resume & Skill Analyzer",
@@ -42,12 +43,13 @@ const Projects = () => {
         { icon: Users, text: "Resume Parsing", color: "text-green-400" },
       ],
       gradient: "from-purple-500 to-pink-600",
+      github: "https://github.com/Majnu04/insightify.git",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-900/30">
-      <div className="container mx-auto max-w-7xl">
+    <section id="projects" className="py-20 px-4 bg-slate-900/30 overflow-hidden">
+      <div className="container mx-auto max-w-7xl overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +66,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-1 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12 w-full">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -72,29 +74,32 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="group"
+              className="group w-full"
             >
-              <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10">
-                <CardContent className="p-0">
-                  <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 w-full max-w-3xl mx-auto">
+                <CardContent className="p-0 overflow-hidden w-full">
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden w-full ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                     {/* Image Section */}
-                    <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                      <div className="aspect-video lg:aspect-square relative">
+                    <div className={`relative overflow-hidden w-full ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                      <div className="aspect-video lg:aspect-square relative overflow-hidden w-full">
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 max-w-full"
                         />
                         <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-80 group-hover:opacity-60 transition-opacity duration-300`} />
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="flex space-x-4">
+                          <div className="flex flex-wrap gap-2 justify-center">
                             <Button
                               size="sm"
                               variant="secondary"
                               className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30"
+                              asChild
                             >
-                              <Github size={16} className="mr-2" />
-                              Code
+                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Github size={16} className="mr-2" />
+                                Code
+                              </a>
                             </Button>
                             <Button
                               size="sm"
@@ -110,23 +115,23 @@ const Projects = () => {
                     </div>
 
                     {/* Content Section */}
-                    <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                      <div className="space-y-6">
+                    <div className={`p-6 sm:p-8 lg:p-12 flex flex-col justify-center w-full max-w-full ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                      <div className="space-y-6 w-full">
                         <div>
-                          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 break-words">
                             {project.title}
                           </h3>
-                          <p className="text-gray-300 text-lg leading-relaxed">
+                          <p className="text-gray-300 text-lg leading-relaxed break-words">
                             {project.description}
                           </p>
                         </div>
 
                         {/* Highlights */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
                           {project.highlights.map((highlight, idx) => (
-                            <div key={idx} className="flex items-center space-x-2">
+                            <div key={idx} className="flex items-center space-x-2 w-full">
                               <highlight.icon size={20} className={highlight.color} />
-                              <span className="text-sm text-gray-300">{highlight.text}</span>
+                              <span className="text-sm text-gray-300 break-words">{highlight.text}</span>
                             </div>
                           ))}
                         </div>
@@ -136,12 +141,12 @@ const Projects = () => {
                           <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                             Technologies Used
                           </h4>
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-2 w-full">
                             {project.technologies.map((tech) => (
                               <Badge
                                 key={tech}
                                 variant="secondary"
-                                className="bg-slate-700/50 text-gray-300 hover:bg-blue-500/20 transition-colors"
+                                className="bg-slate-700/50 text-gray-300 hover:bg-blue-500/20 transition-colors break-words"
                               >
                                 {tech}
                               </Badge>
@@ -150,16 +155,19 @@ const Projects = () => {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="flex space-x-4 pt-4">
+                        <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full">
                           <Button
                             variant="outline"
-                            className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white flex-1 sm:flex-initial"
+                            className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white flex-1 min-w-0"
+                            asChild
                           >
-                            <Github size={16} className="mr-2" />
-                            View Code
+                            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                              <Github size={16} className="mr-2" />
+                              View Code
+                            </a>
                           </Button>
                           <Button
-                            className={`bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white flex-1 sm:flex-initial`}
+                            className={`bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white flex-1 min-w-0`}
                           >
                             <ExternalLink size={16} className="mr-2" />
                             Live Demo

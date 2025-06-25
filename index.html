@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0f172a" />
     <title>Gowri Sankar Nelam - Full Stack Developer & Tech Entrepreneur | Portfolio</title>
     <meta name="description" content="Gowri Sankar Nelam - Passionate Full Stack Developer, Tech Entrepreneur & Founder of Elite Digital Solutions from Visakhapatnam. Specializing in React, Python, Machine Learning & Web Development." />
     <meta name="author" content="Gowri Sankar Nelam" />
@@ -24,12 +28,86 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <style>
+      /* Mobile UX Improvements */
+      html {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Prevent horizontal scroll */
+      #root {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      /* Touch improvements */
+      button, a, [role="button"] {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+      
+      /* Smooth scrolling for mobile */
+      @media (max-width: 768px) {
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        body {
+          font-size: 16px; /* Prevent zoom on iOS */
+        }
+        
+        /* Fix navigation layout on mobile */
+        nav > div > div {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          width: 100% !important;
+        }
+        
+        /* Ensure Portfolio logo stays on left */
+        nav > div > div > div:first-child {
+          flex-shrink: 0 !important;
+          margin-right: auto !important;
+        }
+        
+        /* Ensure menu button stays on right */
+        nav > div > div > button {
+          flex-shrink: 0 !important;
+          margin-left: auto !important;
+        }
+        
+        /* Prevent Projects section overflow */
+        #projects {
+          overflow-x: hidden !important;
+        }
+        
+        /* Ensure all sections don't cause horizontal scroll */
+        section {
+          max-width: 100vw !important;
+          overflow-x: hidden !important;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <section className="mt-32">
-    </section>
   </body>
 </html>

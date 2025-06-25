@@ -45,9 +45,9 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 md:py-4">
+        <div className="flex justify-between items-center py-3 md:py-4 relative">
           <motion.div
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent cursor-pointer"
+            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent cursor-pointer flex-shrink-0"
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection("#home")}
           >
@@ -74,7 +74,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-white hover:bg-blue-500/20 hover:text-blue-400 transition-colors"
+            className="lg:hidden text-white hover:bg-blue-500/20 hover:text-blue-400 transition-colors flex-shrink-0"
             onClick={() => setIsOpen(!isOpen)}
           >
             <motion.div

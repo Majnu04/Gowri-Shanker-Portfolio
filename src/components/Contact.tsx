@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,14 +57,16 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full justify-center items-center text-center lg:text-left">
+          {/* Left Column - Contact Form & Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="space-y-8"
           >
+            {/* Contact Form */}
             <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
@@ -123,18 +125,9 @@ const Contact = () => {
                 </form>
               </CardContent>
             </Card>
-          </motion.div>
 
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            {/* Contact Cards */}
-            <div className="space-y-6">
+            {/* Contact Cards - Improved Layout */}
+            <div className="space-y-6 w-full">
               {contactInfo.map((contact, index) => (
                 <motion.a
                   key={index}
@@ -144,17 +137,17 @@ const Contact = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, x: 10 }}
-                  className={`block ${contact.href === '#' ? 'cursor-default' : 'cursor-pointer'}`}
+                  className={`block w-full ${contact.href === '#' ? 'cursor-default' : 'cursor-pointer'}`}
                 >
-                  <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex items-center space-x-4">
-                        <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${contact.color} flex items-center justify-center`}>
-                          <contact.icon size={20} className="text-white" />
+                  <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 w-full">
+                    <CardContent className="p-6 w-full">
+                      <div className="flex items-center space-x-4 w-full">
+                        <div className={`min-w-[48px] min-h-[48px] w-12 h-12 rounded-full bg-gradient-to-r ${contact.color} flex items-center justify-center shadow-md`}>
+                          <contact.icon size={24} className="text-white" />
                         </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white">{contact.label}</h4>
-                          <p className="text-gray-300">{contact.value}</p>
+                        <div className="flex-1 min-w-0 text-left">
+                          <h4 className="text-lg font-semibold text-white mb-0.5">{contact.label}</h4>
+                          <p className="text-gray-300 text-sm break-all">{contact.value}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -162,7 +155,16 @@ const Contact = () => {
                 </motion.a>
               ))}
             </div>
+          </motion.div>
 
+          {/* Right Column - Social Links & Quick Actions */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
             {/* Social Links */}
             <Card className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 border-slate-600/50">
               <CardContent className="p-8">
@@ -213,6 +215,17 @@ const Contact = () => {
                 Email Me Directly
               </Button>
             </div>
+
+            {/* Add some visual balance with a motivational card */}
+            <Card className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border-blue-500/30">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-bold text-white mb-3">Let's Build Something Great!</h3>
+                <p className="text-gray-300 text-sm">
+                  I'm always excited to work on innovative projects. Whether it's a startup idea, 
+                  enterprise solution, or creative experiment - let's turn your vision into reality.
+                </p>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
 
