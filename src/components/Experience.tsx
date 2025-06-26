@@ -23,21 +23,21 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        <div className="relative flex flex-col items-center">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full hidden md:block" style={{ minHeight: '100%' }} />
+        <div className="relative flex flex-col items-start">
+          {/* Timeline Line on the left */}
+          <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" style={{ minHeight: '100%' }} />
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative flex flex-col items-center w-full"
+            className="relative flex flex-col items-start w-full"
           >
-            {/* Timeline Dot */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-slate-900 z-10 top-0" />
-            <div className="w-full flex justify-center">
-              <Card className="mt-4 md:mt-0 md:w-1/2 w-full bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
+            {/* Timeline Dot on the left */}
+            <div className="absolute left-6 top-0 w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-slate-900 z-10" />
+            <div className="w-full flex md:pl-24 pl-16">
+              <Card className="mt-4 w-full md:w-1/2 bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
                     <div className="flex items-center space-x-2 text-blue-400">
