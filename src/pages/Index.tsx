@@ -18,7 +18,7 @@ import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
+    <div className="min-h-screen w-full overflow-x-hidden bg-gray-50 text-gray-800">
       <Navigation />
 
       <main className="relative">

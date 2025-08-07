@@ -48,7 +48,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-900/30 overflow-hidden">
+    <section id="projects" className="py-20 px-4 bg-gray-50 overflow-hidden">
       <div className="container mx-auto max-w-7xl overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -57,11 +57,11 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-blue-500 mx-auto mb-8" />
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             A showcase of innovative solutions that demonstrate technical expertise and real-world impact
           </p>
         </motion.div>

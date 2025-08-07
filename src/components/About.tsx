@@ -36,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -45,10 +45,10 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8" />
+          <div className="w-24 h-1 bg-blue-500 mx-auto mb-8" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -58,7 +58,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
                 I'm a <span className="text-blue-400 font-semibold">passionate tech enthusiast</span> and 
                 <span className="text-purple-400 font-semibold"> aspiring full-stack developer</span> currently 
@@ -97,14 +97,14 @@ const About = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Card className="bg-slate-800/50 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 h-full">
+                <Card className="bg-white border-gray-200 hover:border-blue-500 transition-all duration-300 h-full hover:shadow-lg">
                   <CardContent className="p-6 text-center">
-                    <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center`}>
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500 flex items-center justify-center">
                       <item.icon size={24} className="text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 text-sm mb-1">{item.subtitle}</p>
-                    <p className="text-blue-400 text-xs font-medium">{item.detail}</p>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h3>
+                    <p className="text-gray-600 text-sm mb-1">{item.subtitle}</p>
+                    <p className="text-blue-600 text-xs font-medium">{item.detail}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -120,12 +120,12 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-gray-400 mb-4">Check out my ventures:</p>
+          <p className="text-gray-600 mb-4">Check out my ventures:</p>
           <a
             href="https://elitetechsolutions-eta.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+            className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors duration-200"
           >
             <span>Elite Tech Solutions Platform</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
