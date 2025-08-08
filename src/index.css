@@ -14,21 +14,21 @@
   }
 
   :root {
-    /* Minimalist Color Palette */
-    --background: 0 0% 95.7%; /* #F4F4F4 */
-    --foreground: 0 0% 18%; /* #2E2E2E */
-    --card: 0 0% 100%; /* #FFFFFF */
-    --card-foreground: 0 0% 18%; /* #2E2E2E */
-    --popover: 0 0% 100%; /* #FFFFFF */
-    --popover-foreground: 0 0% 18%; /* #2E2E2E */
-    --primary: 0 0% 18%; /* #2E2E2E */
-    --primary-foreground: 0 0% 100%; /* #FFFFFF */
-    --secondary: 0 0% 95.7%; /* #F4F4F4 */
-    --secondary-foreground: 0 0% 18%; /* #2E2E2E */
-    --muted: 0 0% 92%; /* Slightly darker F4F4F4 */
-    --muted-foreground: 0 0% 45%; /* Mid-gray */
-    --accent: 210 77% 58%; /* #4A90E2 */
-    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    /* Dark Slate Theme like Skills section */
+    --background: 15 23 42; /* slate-900 */
+    --foreground: 226 232 240; /* slate-200 */
+    --card: 30 41 59; /* slate-800 */
+    --card-foreground: 226 232 240; /* slate-200 */
+    --popover: 15 23 42; /* slate-900 */
+    --popover-foreground: 226 232 240; /* slate-200 */
+    --primary: 52 211 153; /* emerald-400 */
+    --primary-foreground: 15 23 42; /* slate-900 */
+    --secondary: 30 41 59; /* slate-800 */
+    --secondary-foreground: 226 232 240; /* slate-200 */
+    --muted: 30 41 59; /* slate-800 */
+    --muted-foreground: 148 163 184; /* slate-400 */
+    --accent: 52 211 153; /* emerald-400 */
+    --accent-foreground: 15 23 42; /* slate-900 */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 90%; /* Light border */
@@ -66,6 +66,8 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
+    background: #0f172a; /* Dark slate like Skills section */
+    color: #e2e8f0; /* Light text */
     background: #F4F4F4; /* Light gray background */
     color: #2E2E2E; /* Charcoal text */
     min-height: 100vh;

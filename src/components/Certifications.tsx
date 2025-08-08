@@ -12,7 +12,7 @@ const Certifications = () => {
       date: "2024",
       description: "Comprehensive Python programming fundamentals and best practices",
       logo: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=100&h=100&fit=crop",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-emerald-400 to-teal-400",
       skills: ["Python", "Programming Fundamentals", "Data Structures"],
     },
     {
@@ -21,7 +21,7 @@ const Certifications = () => {
       date: "2024",
       description: "Advanced data analysis, visualization, and machine learning with Python",
       logo: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop",
-      color: "from-green-500 to-emerald-500",
+      color: "from-emerald-400 to-teal-400",
       skills: ["Data Science", "Machine Learning", "Data Visualization"],
     },
     {
@@ -45,7 +45,7 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 px-4 bg-slate-900/30">
+    <section id="certifications" className="py-20 px-4 bg-slate-900">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -54,11 +54,11 @@ const Certifications = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Certifications & Learning
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mb-8" />
+          <p className="text-slate-300 max-w-2xl mx-auto text-lg">
             Continuous learning journey validated by industry-recognized certifications
           </p>
         </motion.div>

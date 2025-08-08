@@ -15,10 +15,11 @@ import Leadership from "@/components/Leadership";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-gray-50 text-gray-800">
+    <div className="min-h-screen w-full overflow-x-hidden bg-slate-900 text-slate-100">
       <Navigation />
 
       <main className="relative">
@@ -31,6 +32,8 @@ const Index = () => {
         <Certifications />
         <Contact />
       </main>
+      
+      <ScrollToTop />
     </div>
   );
 };

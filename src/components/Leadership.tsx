@@ -10,7 +10,7 @@ const Leadership = () => {
       subtitle: "Matrix Programming Club",
       description: "Leading a community of passionate programmers and tech enthusiasts",
       stats: "50+ Members",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-emerald-400 to-teal-400",
     },
     {
       icon: Trophy,
@@ -18,7 +18,7 @@ const Leadership = () => {
       subtitle: "Coding Contests & Hackathons",
       description: "Organized multiple programming competitions and technical events",
       stats: "10+ Events",
-      color: "from-purple-500 to-pink-500",
+      color: "from-emerald-400 to-teal-400",
     },
     {
       icon: Target,
@@ -48,7 +48,7 @@ const Leadership = () => {
   ];
 
   return (
-    <section id="leadership" className="py-20 px-4 bg-white">
+    <section id="leadership" className="py-20 px-4 bg-slate-900">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -57,7 +57,7 @@ const Leadership = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Leadership & Community
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8" />

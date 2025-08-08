@@ -32,7 +32,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gray-50">
+    <section id="skills" className="py-20 px-4 bg-slate-900">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -41,11 +41,11 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Skills & Technologies
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mb-8" />
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mb-8" />
+          <p className="text-slate-300 max-w-2xl mx-auto text-lg">
             A comprehensive toolkit built through continuous learning and hands-on experience
           </p>
         </motion.div>
@@ -61,9 +61,9 @@ const Skills = () => {
               className="group"
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 relative inline-block">
+                <h3 className="text-2xl font-semibold text-slate-300 mb-4 relative inline-block">
                   {category.title}
-                  <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-blue-500" />
+                  <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-emerald-400 to-teal-400" />
                 </h3>
               </div>
 
@@ -86,10 +86,10 @@ const Skills = () => {
                   >
                     <Badge
                       variant="secondary"
-                      className="px-6 py-3 text-base font-medium cursor-pointer bg-blue-500 text-white hover:bg-blue-600 hover:shadow-lg border-0 transition-all duration-300 relative overflow-hidden group"
+                      className="px-6 py-3 text-base font-medium cursor-pointer bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 hover:from-emerald-400 hover:to-teal-400 hover:text-slate-900 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300 relative overflow-hidden group backdrop-blur-sm"
                     >
                       <span className="relative z-10">{skill}</span>
-                      <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </Badge>
                   </motion.div>
                 ))}

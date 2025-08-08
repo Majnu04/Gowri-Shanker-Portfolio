@@ -12,14 +12,14 @@ const Contact = () => {
       label: "Email",
       value: "gourishanker0408@gmail.com",
       href: "mailto:gourishanker0408@gmail.com",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-emerald-400 to-teal-400",
     },
     {
       icon: Phone,
       label: "Phone",
       value: "+91-7893804498",
       href: "tel:+917893804498",
-      color: "from-green-500 to-emerald-500",
+      color: "from-emerald-400 to-teal-400",
     },
     {
       icon: MapPin,
@@ -31,15 +31,15 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, name: "GitHub", href: "https://github.com/Majnu04", color: "hover:text-gray-400" },
-    { icon: Linkedin, name: "LinkedIn", href: "https://www.linkedin.com/in/gowri-sankar-nelam-0555771b6/", color: "hover:text-blue-400" },
-    { icon: Code, name: "CodeChef", href: "https://www.codechef.com/users/gouri_shanker", color: "hover:text-orange-400" },
-    { icon: Trophy, name: "LeetCode", href: "https://leetcode.com/u/gouri_shanker/", color: "hover:text-yellow-400" },
-    { icon: Globe, name: "Elite Digital", href: "https://www.elitedigitalsolutions.tech/", color: "hover:text-green-400" },
+    { icon: Github, name: "GitHub", href: "https://github.com/Majnu04", color: "hover:text-emerald-400" },
+    { icon: Linkedin, name: "LinkedIn", href: "https://www.linkedin.com/in/gowri-sankar-nelam-0555771b6/", color: "hover:text-teal-400" },
+    { icon: Code, name: "CodeChef", href: "https://www.codechef.com/users/gouri_shanker", color: "hover:text-emerald-400" },
+    { icon: Trophy, name: "LeetCode", href: "https://leetcode.com/u/gouri_shanker/", color: "hover:text-teal-400" },
+    { icon: Globe, name: "Elite Digital", href: "https://www.elitedigitalsolutions.tech/", color: "hover:text-emerald-400" },
   ];
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-slate-900">
       <div className="container w-full max-w-6xl mx-auto flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -48,11 +48,11 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Let's Connect
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mb-8" />
+          <p className="text-slate-300 max-w-2xl mx-auto text-lg">
             Ready to bring your ideas to life? Let's discuss how we can work together to create something amazing.
           </p>
         </motion.div>

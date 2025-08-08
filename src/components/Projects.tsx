@@ -12,11 +12,11 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       technologies: ["Python", "Machine Learning", "Data Analysis", "Tableau"],
       highlights: [
-        { icon: TrendingUp, text: "85% Forecasting Accuracy", color: "text-green-400" },
-        { icon: Users, text: "Customer Segmentation", color: "text-blue-400" },
-        { icon: Zap, text: "Association Rule Mining", color: "text-purple-400" },
+        { icon: TrendingUp, text: "85% Forecasting Accuracy", color: "text-emerald-400" },
+        { icon: Users, text: "Customer Segmentation", color: "text-teal-400" },
+        { icon: Zap, text: "Association Rule Mining", color: "text-emerald-400" },
       ],
-      gradient: "from-blue-500 to-purple-600",
+      gradient: "from-emerald-400 to-teal-400",
       github: "https://github.com/Majnu04/ecommerce-data-mining.git",
     },
     {
@@ -42,13 +42,13 @@ const Projects = () => {
         { icon: TrendingUp, text: "Career Insights", color: "text-blue-400" },
         { icon: Users, text: "Resume Parsing", color: "text-green-400" },
       ],
-      gradient: "from-purple-500 to-pink-600",
+      gradient: "from-emerald-400 to-teal-400",
       github: "https://github.com/Majnu04/insightify.git",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-50 overflow-hidden">
+    <section id="projects" className="py-20 px-4 bg-slate-900 overflow-hidden">
       <div className="container mx-auto max-w-7xl overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -57,7 +57,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-8" />

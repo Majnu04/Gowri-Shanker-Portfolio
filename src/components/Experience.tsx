@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 bg-white">
+    <section id="experience" className="py-20 px-4 bg-slate-900">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -14,11 +14,11 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Professional Experience
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mb-8" />
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mb-8" />
+          <p className="text-slate-300 max-w-2xl mx-auto text-lg">
             Real-world experience building impactful solutions and driving results
           </p>
         </motion.div>

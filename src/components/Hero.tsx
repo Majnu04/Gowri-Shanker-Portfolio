@@ -19,13 +19,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 bg-slate-900"
     >
-      {/* Minimalist Background */}
+      {/* Dark Background like Skills */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: "linear-gradient(135deg, #F4F4F4 0%, #FFFFFF 100%)",
+          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
         }}
       />
 
@@ -129,7 +129,7 @@ const Hero = () => {
           className="mb-8"
         >
           <motion.h1 
-            className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-800"
+            className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -142,22 +142,22 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-4"
+            className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-4"
           >
             <motion.span 
               className="inline-block"
-              whileHover={{ scale: 1.1, color: "#4A90E2" }}
+              whileHover={{ scale: 1.1, color: "#34d399" }}
             >
               Passionate Tech Enthusiast
             </motion.span>
-            <span className="mx-2 text-blue-500">•</span>
+            <span className="mx-2 text-emerald-400">•</span>
             <motion.span 
               className="inline-block"
-              whileHover={{ scale: 1.1, color: "#4A90E2" }}
+              whileHover={{ scale: 1.1, color: "#34d399" }}
             >
               Full-Stack Developer
             </motion.span>
-            <span className="mx-2 text-blue-500">•</span>
+            <span className="mx-2 text-emerald-400">•</span>
             <motion.span 
               className="inline-block"
               whileHover={{ scale: 1.1, color: "#4A90E2" }}
